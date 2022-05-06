@@ -41,6 +41,20 @@ public class Attraction {
     public int getRideLength() {
         return rideLength;
     }
+  
+    public int getRidersPerHour() {
+        return ridersPerHour;
+    }
 
-    
+    public int getHoursPerDay() {
+        return hoursPerDay;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+  
+    public double getHeight() {
+        return height;
+    }
 }
