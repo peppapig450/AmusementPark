@@ -33,5 +33,14 @@ public class Attraction {
     public int getTicketNum() {
         return ticketNum;
     }
-    public int get
+  
+    public int getAttendantNum() {
+        return attendantNum;
+    }
+  
+    public int getRideLength() {
+        return rideLength;
+    }
+
+    
 }
