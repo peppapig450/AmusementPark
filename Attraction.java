@@ -1,19 +1,24 @@
 public class Attraction {
-    private int maxRiders;
-    private int ticketCost;
-    private int ticketNum;
-    private int attendantNum;
-    private int rideLength;
-    private int ridersPerHour;
-    private int hoursPerDay;
-    private double speed;
-    private double height;
+    private int maxRiders; // Max amount of riders that can be on the ride.
+    private int ticketNum; // Number of tickets to use.
+    private int ridersPerHour; //Number of riders that use the attraction per hour.
+    private int hoursPerDay; // How many hours in a day the attraction is runing.
+    private double speed; // The ride's speed.
+    private double height; // How tall the ride is.
+    private double rideLength; // How many minutes the ride runs for each time.
+    private double ticketCost; // How much a ticket for the ride costs.
+    private double utilityCost; // Daily cost to keep the ride running.
+    private String name; // Name of the ride.
 
-    public Attraction(int mRider, int tCost, int tNum, int aNum, int rLength, int rPerHour, int hPerDay, double speed, double height) {
+
+    public Attraction(String name, int mRider, double tCost, int tNum,
+                     double rLength, int rPerHour, int hPerDay, double speed, double height,
+                     double uCost) {
+    this.name = name;
+    this.utilityCost = uCost;
     this.maxRiders = mRider;
     this.ticketCost = tCost;
     this.ticketNum = tNum;
-    this.attendantNum = aNum;
     this.rideLength = rLength;
     this.ridersPerHour = rPerHour;
     this.hoursPerDay = hPerDay;
@@ -21,24 +26,27 @@ public class Attraction {
     this.height = height;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getUtilityCost() {
+        return utilityCost;
+    }
+
     public int getMaxRiders() {
         return maxRiders;
     }
 
-    public int getTicketCost() {
+    public double getTicketCost() {
         return ticketCost;
     }
 
-    // retur
     public int getTicketNum() {
         return ticketNum;
     }
   
-    public int getAttendantNum() {
-        return attendantNum;
-    }
-  
-    public int getRideLength() {
+    public double getRideLength() {
         return rideLength;
     }
   
@@ -56,5 +64,9 @@ public class Attraction {
   
     public double getHeight() {
         return height;
+    }
+
+    public double dailyProfit() {
+
     }
 }
