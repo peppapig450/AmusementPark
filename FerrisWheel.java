@@ -1,7 +1,7 @@
 public class FerrisWheel extends Attraction {
 
-  public FerrisWheel(int mRider, int tCost, int tNum, int aNum, int rLength, int rPerHour, int hPerDay, double speed, double height) {
-    super(mRider, tCost, tNum, aNum, rLength, rPerHour, hPerDay, speed, height); 
+  public FerrisWheel(String name, int mRider, double tCost, int tNum, double rLength, int rPerHour, int hPerDay, double speed, double height, double uCost) {
+    super(name, mRider, tCost, tNum, rLength, rPerHour, hPerDay, speed, height, uCost); 
   }
 
 }

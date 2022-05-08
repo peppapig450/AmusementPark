@@ -11,6 +11,20 @@ public class Attraction {
     private String name; // Name of the ride.
 
 
+    /**
+     * Create new Attraction object.
+     * @param name name of the Attraction.
+     * @param mRider max amount of riders for the Attraction.
+     * @param tCost ticket cost for the Attraction.
+     * @param tNum number of tickets to use for the Attraction.
+     * @param rLength length of the Attraction.
+     * @param rPerHour number of riders that use the Attraction per hour.
+     * @param hPerDay how many hours the Attraction operates a day.
+     * @param speed the speed of the Attraction.
+     * @param height how tall the Attraction is.
+     * @param uCost how much it costs to run the Attraction per day
+     */
+
     public Attraction(String name, int mRider, double tCost, int tNum,
                      double rLength, int rPerHour, int hPerDay, double speed, double height,
                      double uCost) {
@@ -26,6 +40,10 @@ public class Attraction {
     this.height = height;
     }
 
+    /**
+     * 
+     * @return the name of the Attraction
+     */
     public String getName() {
         return name;
     }
@@ -66,7 +84,7 @@ public class Attraction {
         return height;
     }
 
-    public double dailyProfit() {
+    public double dailyCost() {
 
     }
 }
