@@ -1,4 +1,5 @@
 import java.lang.Math.*;
+import java.util.ArrayList;
 
 public class FerrisWheel extends Attraction 
 {
@@ -21,7 +22,11 @@ public class FerrisWheel extends Attraction
     this.circumference = Math.PI * 2 * radius;
     this.isRomantic = isRomantic; 
   }
-  
+
+  private String array = super.toString();
+  ArrayList<String> list = array.asList(string.split("\\n+"));
+
+    
   public double getTurnSpeed() {
     return turnSpeed;  
   }
@@ -41,4 +46,9 @@ public class FerrisWheel extends Attraction
   public boolean getIsRomantic() {
     return isRomantic; 
   }
+
+ 
+  public String toString() {
+     return super.toString()  ;
+    }
 }
