@@ -59,4 +59,30 @@ public class Attraction {
     public boolean isFatal() {
         return isFatal;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String openStatus() {
+        if (isOpen()) {
+            return "The ride is open. ";
+        } else {
+            return "The ride is closed. ";
+        }
+    }
+
+    public String fatalityStatus() {
+        if (isFatal()) {
+            return "The ride is fatal. ";
+        } else {
+            return "The ride isn't fatal. ";
+        }
+    }
+
+    @Override
+    public String toString() {
+     return "Information about the " + this.getClass().getSimpleName() + " attraction " + name + ".\n" + openStatus() + fatalityStatus() + "\nRide Duration: " + duration + " minutes. \nRide Speed: " + speed + " kmh.\nRide Height: " + height + " meters.\nCost of each ticket is: $" + ticketCost + ".\nCurrent riders are: " + currentRiders + " riders. \nMax capacity of the ride: " + maxCapacity + " people.";
+    }
+
 }
