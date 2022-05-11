@@ -1,5 +1,6 @@
-import java.lang.Math.*;
+import java.lang.Math;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FerrisWheel extends Attraction 
 {
@@ -11,6 +12,12 @@ public class FerrisWheel extends Attraction
     
   private boolean isRomantic; 
   
+  private String str;
+  private String[] strSplit;
+  private ArrayList<String> strList;
+
+
+  
   public FerrisWheel(int maxCapacity, int currentRiders,
                     double ticketCost, double height, double speed, double duration,
                     boolean isOpen, boolean isFatal,
@@ -21,12 +28,11 @@ public class FerrisWheel extends Attraction
     this.radius = radius;
     this.circumference = Math.PI * 2 * radius;
     this.isRomantic = isRomantic; 
+    this.str = super.toString();
+    this.strSplit = str.split("\\n");
+    this.strList = new ArrayList<String>(Arrays.asList(strSplit));
   }
-
-  private String array = super.toString();
-  ArrayList<String> list = array.asList(string.split("\\n+"));
-
-    
+ 
   public double getTurnSpeed() {
     return turnSpeed;  
   }
@@ -47,8 +53,22 @@ public class FerrisWheel extends Attraction
     return isRomantic; 
   }
 
- 
+  public ArrayList<String> getStrList() {
+    return strList;
+  }
+
+  @Override
   public String toString() {
-     return super.toString()  ;
+     strList.add(5, "Ferris Wheel Turn Speed: " + turnSpeed);
+     strList.add(6, "Ferris Wheel G Force: " + gForce);
+     strList.add(7, "Ferris Wheel Radius: " + radius);
+     strList.add(8, "Ferris Wheel Circumference: " + circumference);
+     String toReturn = "";
+
+     for (String s : strList) {
+       toReturn += s + ".\n";
+     }
+
+     return toReturn;
     }
 }

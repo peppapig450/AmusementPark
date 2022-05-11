@@ -82,7 +82,7 @@ public class Attraction {
 
     @Override
     public String toString() {
-     return "Information about the " + this.getClass().getSimpleName() + " attraction " + name + ".\n" + openStatus() + fatalityStatus() + "\nRide Duration: " + duration + " minutes. \nRide Speed: " + speed + " kmh.\nRide Height: " + height + " meters.\nCost of each ticket is: $" + ticketCost + ".\nCurrent riders are: " + currentRiders + " riders. \nMax capacity of the ride: " + maxCapacity + " people.";
+     return "Information about the " + this.getClass().getSimpleName() + " attraction " + name + ".\n" + openStatus() + fatalityStatus() + "\nRide Duration: " + duration + " minutes. \nRide Speed: " + speed + " kmh.\nRide Height: " + height + " meters.\nCost of each ticket: $" + ticketCost + ".\nCurrent riders: " + currentRiders + " riders. \nMax capacity of the ride: " + maxCapacity + " people.";
     }
 
 }
